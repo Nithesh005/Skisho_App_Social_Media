@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  logger: ^2.3.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -52,6 +53,17 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - lib/asset/Images/person.png
+    - lib/asset/Images/logout.png
+    - lib/asset/Images/profile1.jpeg
+    - lib/asset/Images/profile2.jpg
+    - lib/asset/Images/profile3.jpg
+    - lib/asset/Images/profile4.jpg
+    - lib/asset/Images/profile5.jpg
+    - lib/asset/Images/profile6.jpg
+    - lib/asset/Images/profile7.jpg
+    - lib/asset/Images/profile8.jpg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -88,3 +100,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  
