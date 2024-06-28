@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
+<<<<<<< Updated upstream
 
 void main() {
   runApp(new MaterialApp(
     home: new MyApp(),
+=======
+
+import './assets/style.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: const MyApp(),
+    theme: ThemeData(useMaterial3: true, fontFamily: 'Poppins'),
+>>>>>>> Stashed changes
     debugShowCheckedModeBanner: false,
   ));
 }
@@ -18,7 +28,14 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Skisho'),
+        title: Text(
+          'Skishooo',
+          style: TextStyle(
+            fontSize: 24,
+            fontFamily: 'Poppins',
+            fontStyle: FontStyle.italic,
+          ),
+        ),
         backgroundColor: Color(0x00000000),
       ),
     );
