@@ -13,7 +13,7 @@ class SettingsPage extends StatefulWidget {
   @override
   State<SettingsPage> createState() => _SettingsPageState();
 
-   @override
+  @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }
 
@@ -46,40 +46,31 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar : AppBar(
-      backgroundColor: Color(0x00000000),
-      leading: SafeArea(
-        child: Row(
-
-          children: <Widget>[
-            IconButton(
-              icon: const Icon(
-                Icons.person_pin,
-                size: 24.0,
-              ),
-              color: AppColors.primaryColor,
-              onPressed: () {
-                print('Navigate page');
-              },
+        appBar: AppBar(
+          backgroundColor: Color(0x00000000),
+          title: Text("Settings"),
+          leading: SafeArea(
+            child: Row(
+              children: <Widget>[
+                IconButton(
+                  icon: const Icon(
+                    Icons.person_pin,
+                    size: 24.0,
+                  ),
+                  color: AppColors.primaryColor,
+                  onPressed: () {
+                    print('Navigate page');
+                  },
+                ),
+              ],
             ),
-            IconButton(
-              icon: const Icon(
-                Icons.person_pin,
-                size: 24.0,
-              ),
-              color: AppColors.primaryColor,
-              onPressed: () {
-                print('Navigate page');
-              },
-            ),
+          ),
+          actions: <Widget>[
+            Text('Skisho'),
           ],
         ),
-      ),
-      actions: <Widget>[
-        Text('Skisho'),
-      ],
-    ),
         body: ListView.separated(
             itemBuilder: (BuildContext context, int index) {
               final option = options[index];
