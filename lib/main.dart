@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:logger/logger.dart';
 import 'package:skishoapp/Pages/Page1.dart';
 import 'package:skishoapp/Pages/Page2.dart';
 import 'package:skishoapp/Pages/Page3.dart';
 import 'package:skishoapp/Pages/Settings.dart';
+
 import 'asset/style.dart';
 
 final Logger logger = Logger();
@@ -84,7 +84,7 @@ class _MyAppState extends State<MyApp> {
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        backgroundColor: Colors.red[500],
+        // backgroundColor: Colors.red[500],
         selectedItemColor: AppColors.primaryColor,
         onTap: _onItemTapped,
         items: _navItems.map((item) {
