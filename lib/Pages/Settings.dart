@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:skishoapp/Components/AppBarComponent.dart';
+import 'package:skishoapp/Pages/Page1.dart';
+import 'package:skishoapp/Pages/Page2.dart';
+import 'package:skishoapp/Pages/Page3.dart';
 import 'package:skishoapp/asset/style.dart';
+import 'package:skishoapp/main.dart';
 // import 'package:skishoapp/asset/style.dart';
 
 void Settings() {
@@ -19,7 +23,7 @@ class SettingsPage extends StatefulWidget {
 
 class _SettingsPageState extends State<SettingsPage> {
   final List<Map<String, dynamic>> options = [
-    {'title': 'Profile Search', 'icon': 'icon1'},
+    {'title': 'Profile Search', 'icon': 'icon1' , 'route' : page3()},
     {'title': 'My Likes & My Views', 'icon': 'icon2'},
     {'title': 'App Settings', 'icon': 'icon2'},
     {'title': 'My Activity', 'icon': 'icon2'},
@@ -76,6 +80,13 @@ class _SettingsPageState extends State<SettingsPage> {
               final option = options[index];
               return ListTile(
                 title: Text(option['title']),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => option['route']),
+                  );
+                },
               );
             },
             separatorBuilder: (BuildContext context, int index) {
