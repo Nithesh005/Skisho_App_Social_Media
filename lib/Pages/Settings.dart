@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:skishoapp/Components/AppBarComponent.dart';
+// import 'package:skishoapp/asset/style.dart';
 
 void Settings() {
   runApp(const SettingsPage());
@@ -9,13 +11,63 @@ class SettingsPage extends StatefulWidget {
 
   @override
   State<SettingsPage> createState() => _SettingsPageState();
+
+   @override
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }
 
 class _SettingsPageState extends State<SettingsPage> {
+  final List<Map<String, dynamic>> options = [
+    {'title': 'Profile Search', 'icon': 'icon1'},
+    {'title': 'My Likes & My Views', 'icon': 'icon2'},
+    {'title': 'App Settings', 'icon': 'icon2'},
+    {'title': 'My Activity', 'icon': 'icon2'},
+    {'title': 'Saved', 'icon': 'icon2'},
+    {'title': 'Subscriptions', 'icon': 'icon2'},
+    {'title': 'My Account', 'icon': 'icon2'},
+    {'title': 'Secret Vault', 'icon': 'icon2'},
+    {'title': 'Secret Security', 'icon': 'icon2'},
+    {'title': 'Categories', 'icon': 'icon2'},
+    {'title': 'Achivements', 'icon': 'icon2'},
+    {'title': 'Account Management', 'icon': 'icon2'},
+    {'title': 'Zone Winners', 'icon': 'icon2'},
+    {'title': 'Star of Skisho', 'icon': 'icon2'},
+    {'title': 'Languages', 'icon': 'icon2'},
+    {'title': 'My Bills & Transactions', 'icon': 'icon2'},
+    {'title': 'Skisho Verification', 'icon': 'icon2'},
+    {'title': 'App Updates', 'icon': 'icon2'},
+    {'title': 'Version', 'icon': 'icon2'},
+    {'title': 'Founder & CEO', 'icon': 'icon2'},
+    {'title': 'Help & Support', 'icon': 'icon2'},
+    {'title': 'Log Out', 'icon': 'icon2'},
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text("This is the setting page"),
+    return MaterialApp(
+      home: Scaffold(
+        appBar : AppBar(
+          title: const Text('Settings'),
+        ),
+        body: ListView.separated(
+            itemBuilder: (BuildContext context, int index) {
+              final option = options[index];
+              return ListTile(
+                title: Text(option['title']),
+              );
+            },
+            separatorBuilder: (BuildContext context, int index) {
+              return SizedBox(
+                height: 0.0,
+              );
+              // return Divider(
+              //   color: Colors.grey,
+              //   thickness: 1.0,
+              //   height: 10.0,
+              // );
+            },
+            itemCount: options.length),
+      ),
     );
   }
 }

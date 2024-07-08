@@ -39,7 +39,6 @@ class _page1State extends State<page1> {
             // Access the image location and label from stories
             String imageLoc = stories[index]['loc'];
             String label = stories[index]['label'];
-
             return Container(
               child: CircleAvatar(
                 radius: 40.0,

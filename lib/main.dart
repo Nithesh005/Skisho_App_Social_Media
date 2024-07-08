@@ -25,9 +25,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final List<Map<String, dynamic>> _navItems = [
     {'icon': Icons.home, 'label': 'Home'},
-    {'icon': Icons.chat, 'label': 'Chat'},
-    {'icon': Icons.settings, 'label': 'Settings'},
-    {'icon': Icons.post_add, 'label': 'Post'},
+    // {'icon': Icons.chat, 'label': 'Chat'},
+    {'icon': Icons.wine_bar_outlined, 'label': 'Trophy'},
+    // {'icon': Icons.post_add, 'label': 'Post'},
     {'icon': Icons.settings, 'label': 'Settings'},
   ];
   int _currentIndex = 0;
@@ -48,39 +48,39 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0x00000000),
-        leading: SafeArea(
-          child: Row(
-            children: <Widget>[
-              IconButton(
-                icon: const Icon(
-                  Icons.person_pin,
-                  size: 24.0,
-                ),
-                color: AppColors.primaryColor,
-                onPressed: () {
-                  // print('Navigate page');
-                  logger.i('Navigate page ---');
-                },
-              ),
-              IconButton(
-                icon: const Icon(
-                  Icons.person_pin,
-                  size: 24.0,
-                ),
-                color: AppColors.primaryColor,
-                onPressed: () {
-                  print('Navigate page');
-                },
-              ),
-            ],
-          ),
-        ),
-        actions: <Widget>[
-          Text('Skisho'),
-        ],
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Color(0x00000000),
+      //   leading: SafeArea(
+      //     child: Row(
+      //       children: <Widget>[
+      //         IconButton(
+      //           icon: const Icon(
+      //             Icons.person_pin,
+      //             size: 24.0,
+      //           ),
+      //           color: AppColors.primaryColor,
+      //           onPressed: () {
+      //             // print('Navigate page');
+      //             logger.i('Navigate page ---');
+      //           },
+      //         ),
+      //         IconButton(
+      //           icon: const Icon(
+      //             Icons.person_pin,
+      //             size: 24.0,
+      //           ),
+      //           color: AppColors.primaryColor,
+      //           onPressed: () {
+      //             print('Navigate page');
+      //           },
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      //   actions: <Widget>[
+      //     Text('Skisho'),
+      //   ],
+      // ),
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
