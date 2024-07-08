@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skishoapp/Components/AppBarComponent.dart';
+import 'package:skishoapp/asset/style.dart';
 // import 'package:skishoapp/asset/style.dart';
 
 void Settings() {
@@ -47,8 +48,38 @@ class _SettingsPageState extends State<SettingsPage> {
     return MaterialApp(
       home: Scaffold(
         appBar : AppBar(
-          title: const Text('Settings'),
+      backgroundColor: Color(0x00000000),
+      leading: SafeArea(
+        child: Row(
+
+          children: <Widget>[
+            IconButton(
+              icon: const Icon(
+                Icons.person_pin,
+                size: 24.0,
+              ),
+              color: AppColors.primaryColor,
+              onPressed: () {
+                print('Navigate page');
+              },
+            ),
+            IconButton(
+              icon: const Icon(
+                Icons.person_pin,
+                size: 24.0,
+              ),
+              color: AppColors.primaryColor,
+              onPressed: () {
+                print('Navigate page');
+              },
+            ),
+          ],
         ),
+      ),
+      actions: <Widget>[
+        Text('Skisho'),
+      ],
+    ),
         body: ListView.separated(
             itemBuilder: (BuildContext context, int index) {
               final option = options[index];

@@ -39,9 +39,9 @@ class _MyAppState extends State<MyApp> {
 
   final List<Widget> _pages = [
     page1(),
-    page2(),
+    // page2(),
     page3(),
-    page1(),
+    // page1(),
     SettingsPage(),
   ];
 
@@ -84,7 +84,7 @@ class _MyAppState extends State<MyApp> {
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        backgroundColor: Colors.red[500],
+        // backgroundColor: Colors.red[500],
         selectedItemColor: AppColors.primaryColor,
         onTap: _onItemTapped,
         items: _navItems.map((item) {
