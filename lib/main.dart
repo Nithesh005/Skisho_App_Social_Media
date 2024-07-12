@@ -9,6 +9,11 @@ import 'asset/style.dart';
 
 final Logger logger = Logger();
 void main() {
+  
+  // filtersData.map(
+  //   (e) => print(e['All']),
+  // ).toList();
+
   runApp(MaterialApp(
     home: const MyApp(),
     theme: ThemeData(useMaterial3: true),

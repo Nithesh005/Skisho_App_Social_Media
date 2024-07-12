@@ -3,6 +3,7 @@ import 'package:skishoapp/Components/AppBarComponent.dart';
 import 'package:skishoapp/Pages/Page1.dart';
 import 'package:skishoapp/Pages/Page2.dart';
 import 'package:skishoapp/Pages/Page3.dart';
+import 'package:skishoapp/Pages/ProfileSearch.dart';
 import 'package:skishoapp/asset/style.dart';
 import 'package:skishoapp/main.dart';
 // import 'package:skishoapp/asset/style.dart';
@@ -23,28 +24,28 @@ class SettingsPage extends StatefulWidget {
 
 class _SettingsPageState extends State<SettingsPage> {
   final List<Map<String, dynamic>> options = [
-    {'title': 'Profile Search', 'icon': 'icon1' , 'route' : page3()},
-    {'title': 'My Likes & My Views', 'icon': 'icon2'},
-    {'title': 'App Settings', 'icon': 'icon2'},
-    {'title': 'My Activity', 'icon': 'icon2'},
-    {'title': 'Saved', 'icon': 'icon2'},
-    {'title': 'Subscriptions', 'icon': 'icon2'},
-    {'title': 'My Account', 'icon': 'icon2'},
-    {'title': 'Secret Vault', 'icon': 'icon2'},
-    {'title': 'Secret Security', 'icon': 'icon2'},
-    {'title': 'Categories', 'icon': 'icon2'},
-    {'title': 'Achivements', 'icon': 'icon2'},
-    {'title': 'Account Management', 'icon': 'icon2'},
-    {'title': 'Zone Winners', 'icon': 'icon2'},
-    {'title': 'Star of Skisho', 'icon': 'icon2'},
-    {'title': 'Languages', 'icon': 'icon2'},
-    {'title': 'My Bills & Transactions', 'icon': 'icon2'},
-    {'title': 'Skisho Verification', 'icon': 'icon2'},
-    {'title': 'App Updates', 'icon': 'icon2'},
-    {'title': 'Version', 'icon': 'icon2'},
-    {'title': 'Founder & CEO', 'icon': 'icon2'},
-    {'title': 'Help & Support', 'icon': 'icon2'},
-    {'title': 'Log Out', 'icon': 'icon2'},
+    {'title': 'Profile Search', 'icon': 'icon1' , 'route' : ProfileSearchClass()},
+    {'title': 'My Likes & My Views', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'App Settings', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'My Activity', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Saved', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Subscriptions', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'My Account', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Secret Vault', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Secret Security', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Categories', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Achivements', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Account Management', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Zone Winners', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Star of Skisho', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Languages', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'My Bills & Transactions', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Skisho Verification', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'App Updates', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Version', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Founder & CEO', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Help & Support', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Log Out', 'icon': 'icon2', 'route' : ProfileSearchClass()},
   ];
 
   @override
@@ -54,26 +55,18 @@ class _SettingsPageState extends State<SettingsPage> {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0x00000000),
-          title: Text("Settings"),
+          // title: Text("Settings"),
           leading: SafeArea(
             child: Row(
               children: <Widget>[
-                IconButton(
-                  icon: const Icon(
-                    Icons.person_pin,
-                    size: 24.0,
-                  ),
-                  color: AppColors.primaryColor,
-                  onPressed: () {
-                    print('Navigate page');
-                  },
-                ),
+                Padding(padding: EdgeInsets.all(7)),
+                CircleAvatar(
+                  backgroundColor: AppColors.primaryColor,
+                  backgroundImage: AssetImage('lib/asset/Images/person.png'),
+                )
               ],
             ),
           ),
-          actions: <Widget>[
-            Text('Skisho'),
-          ],
         ),
         body: ListView.separated(
             itemBuilder: (BuildContext context, int index) {
