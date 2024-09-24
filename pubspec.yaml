@@ -57,6 +57,8 @@ flutter:
   assets:
     - lib/asset/Images/person.png
     - lib/asset/Images/skisho.png
+    - lib/asset/Images/login.png
+    - lib/asset/Images/otp.png
     - lib/asset/Images/logout.png
     - lib/asset/Images/profile1.jpeg
     - lib/asset/Images/profile2.jpg

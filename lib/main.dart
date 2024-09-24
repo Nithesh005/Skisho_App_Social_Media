@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
+import 'package:skishoapp/Pages/Login.dart';
 import 'package:skishoapp/Pages/Page1.dart';
 import 'package:skishoapp/Pages/Page2.dart';
 import 'package:skishoapp/Pages/Page3.dart';
@@ -53,54 +54,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Color(0x00000000),
-      //   leading: SafeArea(
-      //     child: Row(
-      //       children: <Widget>[
-      //         IconButton(
-      //           icon: const Icon(
-      //             Icons.person_pin,
-      //             size: 24.0,
-      //           ),
-      //           color: AppColors.primaryColor,
-      //           onPressed: () {
-      //             // print('Navigate page');
-      //             logger.i('Navigate page ---');
-      //           },
-      //         ),
-      //         IconButton(
-      //           icon: const Icon(
-      //             Icons.person_pin,
-      //             size: 24.0,
-      //           ),
-      //           color: AppColors.primaryColor,
-      //           onPressed: () {
-      //             print('Navigate page');
-      //           },
-      //         ),
-      //       ],
-      //     ),
-      //   ),
-      //   actions: <Widget>[
-      //     Text('Skisho'),
-      //   ],
-      // ),
-      body: _pages[_currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        // backgroundColor: Colors.red[500],
-        selectedItemColor: AppColors.primaryColor,
-        onTap: _onItemTapped,
-        items: _navItems.map((item) {
-          return BottomNavigationBarItem(
-              icon: Icon(
-                item['icon'],
-                // color: AppColors.primaryColor,
-              ),
-              label: item['label']);
-        }).toList(),
-      ),
+      body: Login(),
     );
   }
 }

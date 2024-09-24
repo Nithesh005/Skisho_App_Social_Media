@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:skishoapp/Components/AppBarComponent.dart';
+import 'package:skishoapp/Pages/Login.dart';
 import 'package:skishoapp/Pages/Page1.dart';
 import 'package:skishoapp/Pages/Page2.dart';
 import 'package:skishoapp/Pages/Page3.dart';
 import 'package:skishoapp/Pages/ProfileSearch.dart';
+import 'package:skishoapp/Pages/SubmitForm.dart';
 import 'package:skishoapp/asset/style.dart';
 import 'package:skishoapp/main.dart';
 // import 'package:skishoapp/asset/style.dart';
@@ -25,6 +27,7 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   final List<Map<String, dynamic>> options = [
     {'title': 'Profile Search', 'icon': 'icon1' , 'route' : ProfileSearchClass()},
+    {'title': 'Submit Form', 'icon': 'icon1' , 'route' : Submitform()},
     {'title': 'My Likes & My Views', 'icon': 'icon2', 'route' : ProfileSearchClass()},
     {'title': 'App Settings', 'icon': 'icon2', 'route' : ProfileSearchClass()},
     {'title': 'My Activity', 'icon': 'icon2', 'route' : ProfileSearchClass()},
@@ -45,7 +48,7 @@ class _SettingsPageState extends State<SettingsPage> {
     {'title': 'Version', 'icon': 'icon2', 'route' : ProfileSearchClass()},
     {'title': 'Founder & CEO', 'icon': 'icon2', 'route' : ProfileSearchClass()},
     {'title': 'Help & Support', 'icon': 'icon2', 'route' : ProfileSearchClass()},
-    {'title': 'Log Out', 'icon': 'icon2', 'route' : ProfileSearchClass()},
+    {'title': 'Log Out', 'icon': 'icon2', 'route' : Login()},
   ];
 
   @override
@@ -55,7 +58,7 @@ class _SettingsPageState extends State<SettingsPage> {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0x00000000),
-          // title: Text("Settings"),
+          // title: Text("Settings"), 
           leading: SafeArea(
             child: Row(
               children: <Widget>[
